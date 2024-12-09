@@ -1,0 +1,358 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensure the body fills the full screen */
+}
+
+/* Container for the whole page */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the container takes full viewport height */
+    /* position: relative; */
+}
+
+/* Topbar with banner and logo */
+.topbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.left-align > h1 {
+    color: black;
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: darkgray;
+    padding: 20px 0;
+    z-index: 2;
+}
+
+#logo {
+    height: 80px;
+    margin-right: 20px;
+}
+
+/* Sidebar left (links and contact form) */
+.sidebarleft {
+    background-color: lightgray;
+    width: 250px;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 120px; /* Ensure space for the banner */
+}
+
+.sidebarleft nav h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.sidebarleft ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebarleft ul li {
+    margin: 10px 0;
+}
+
+.sidebarleft .contact-form h2 {
+    margin-top: 30px;
+    font-size: 1.2em;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.sidebarleft .form-group {
+    margin-bottom: 10px;
+}
+
+.sidebarleft input {
+    width: 100%;
+    padding:8px;
+    margin-top: 5px;
+    
+    }
+
+button {
+    padding: 10px 30px;
+    background-color: #f8a1b0;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    width: 150px;
+}
+
+button:hover {
+    background-color: lightsalmon;
+}
+
+/* Main content area */
+.centerbar {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    background-color: lightsteelblue;
+}
+
+.welcome-message {
+    text-align: center;
+    margin-bottom: 30px;
+    justify-content: flex-end;
+}
+
+.welcome-message h2 {
+    font-size: 2em;
+    color: #333;
+}
+
+.product-list-section {
+    margin-top: 40px;
+}
+
+.product-list-section > h2 {
+    text-align: center;
+    font-size: 2em;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+.product {
+    width: 30%;
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product h3 {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.product p {
+    margin: 10px 0;
+}
+
+/* Right Sidebar (Images) */
+.sidebarright {
+    background-color: lightcoral;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 120px;
+    justify-content: space-around;
+}
+
+.sidebarright .pic img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+/* Footer Section */
+
+
+.footer {
+    width: 100%;
+    padding: 20px;
+    background-color: brown; /* Optional, for background color */
+}
+
+.bottombar {
+    display: flex;
+    justify-content: space-around /* Aligns content to the left and right */
+}
+
+.bottombarL {
+    text-align: left;
+}
+
+.bottombarR {
+    text-align: right;
+}
+
+/* Flex Layout for Main Content */
+.main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Flex Layout for the Sidebar and Main Content */
+.sidebarleft,
+.centerbar,
+.sidebarright {
+    display: flex;
+    flex-direction: column;padding:20px;box-sizing:border-box;
+}
+
+.sidebarleft {
+    width: 25%;
+}
+
+.centerbar {
+    width: 50%;
+}
+
+.sidebarright {
+    width: 25%;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column; /* Stack items vertically on tablets */
+    }
+
+    .sidebarleft,
+    .centerbar,
+    .sidebarright {
+        width: 100%;  /* Ensure all sections take full width */
+    }
+
+    /* Adjust the padding for a cleaner layout */
+    .sidebarleft,
+    .sidebarright {
+        padding: 15px;
+    }
+
+    /* Adjust product list for tablet screens */
+    .product-list {
+        flex-direction: column;  /* Stack products vertically */
+        align-items: center;
+    }
+
+    .product {
+        width: 80%;  /* Ensure product images and text are proportionate */
+        margin-bottom: 20px;
+    }
+
+    /* Footer for tablet screens */
+    .footer {
+        flex-direction: column;/* Stack footer items vertically */
+        align-items: center;
+        text-align: center;
+        
+        
+       
+    }
+    .bottombar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Aligns content to the left and right */
+    }
+    
+    /* Images in the right sidebar */
+    .sidebarright img {
+        width: 100%;  /* Ensure images take full width on tablets */
+        margin: 0 auto; /* Center the images */
+    }
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 600px) {
+    /* Stack content vertically */
+    .container {
+        flex-direction: column;
+    }
+
+    /* Stack the topbar content */
+    .topbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .banner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Main content layout: stack all items vertically */
+    .main-content {
+        flex-direction: column; /* Change layout to column */
+    }
+
+    /* Sidebar and center content should each take up 100% width */
+    .sidebarleft,
+    .centerbar,
+    .sidebarright {
+        width: 100%;  /* Each takes full width */
+        flex-shrink: 0;  /* Prevent shrinking */
+        min-width: 0;  /* Prevent items from collapsing */
+    }
+
+    /* Adjust product list for mobile */
+    .product-list {
+        flex-direction: column;  /* Stack products vertically */
+        align-items: center;
+    }
+
+    .product {
+        width: 80%;  /* Keep product width reasonable */
+        margin-bottom: 20px;
+    }
+
+    /* Footer layout for small screens */
+    .footer {
+        flex-direction: column; /* Stack footer items vertically */
+        align-items: center;
+        text-align: center;
+        padding: 20px; /* Add padding for spacing */
+        width: 100%; /* Ensure footer takes full width */
+        box-sizing: border-box; /* Prevent overflow */
+    }
+    .bottombarL,.bottombarR {
+        width: 100%; /* Ensure they take up full width */
+        margin-bottom: 10px;
+    }
+
+    /* Images in the right sidebar should take full width */
+    .sidebarright img {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
