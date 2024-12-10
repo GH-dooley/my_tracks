@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/stylesheet_dooleyRev01.css">
+    <title>Dooleys Landing Page</title>
+</head>
+
+<body>
+    <section class="container">
+        <!-- Banner and logo at the top -->
+        <div class="topbar">
+            <div class="banner">
+                <img id="logo" src="./img/banner_crop_150620.jpg" alt="home bakery">
+                <div class="left-align">
+                    <h1>Great Taste Home Baker</h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main content with sidebars and center content -->
+        <div class="main-content">
+            <div class="sidebarleft">
+                <!-- Links and contact form -->
+                <nav>
+                    <ul>
+                        <h1>Links</h1>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contactus.html">Contact</a></li>
+                    </ul>
+                    <div class="contact-form">
+                        <h2>Sign Up for Updates</h2>
+                        <form action="/submit" method="post">
+                            <div class="form-group">
+                                <label for="firstName">First Name:</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name:</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+
+
+            <!-- Products and main content -->
+            <div class="centerbar">
+                <div class="welcome-message">
+                    <h2>Welcome to Great Taste Home Baker!</h2>
+                    <p>Experience the best homemade treats in town.</p>
+                    <p>Explore our wide variety of baked goods!</p>
+                    <a href="products.html" class="btn">View Our Products</a>
+                </div>
+
+                <!-- Product List Section -->
+                <div class="product-list-section">
+                    <h2>Our Popular Products</h2>
+                    <div class="product-list">
+                        <div class="product">
+                            <img src="img/brownies.jpg" alt="Brownies">
+                            <h3>Brownies</h3>
+                            <p>Rich, fudgy, and delicious brownies made with the finest ingredients.</p>
+                        </div>
+                        <div class="product">
+                            <img src="img/cupcakes.jpg" alt="Cupcakes">
+                            <h3>Cupcakes</h3>
+                            <p>Soft, fluffy cupcakes topped with creamy frosting.</p>
+                        </div>
+                        <div class="product">
+                            <img src="img/cookies.jpg" alt="Cookies">
+                            <h3>Cookies</h3>
+                            <p>Chewy, gooey cookies in a variety of flavors.</p>
+                        </div>
+                        <div class="product">
+                            <img src="img/buns.jpg" alt="Buns">
+                            <h3>Buns</h3>
+                            <p>Freshly baked buns, perfect for any occasion.</p>
+                        </div>
+                        <div class="product">
+                            <img src="img/cheese.jpg" alt="Cheese Cake">
+                            <h3>Cheese Cake</h3>
+                            <p>A delightful blend of creamy cheese and a buttery crust, perfect for any occasion.</p>
+                        </div>
+                        <div class="product">
+                            <img src="img/chocolate.jpg" alt="Chocolate Cake">
+                            <h3>Chocolate Cake</h3>
+                            <p>Rich, moist, and decadent, our chocolate cake is made with premium cocoa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="sidebarright">
+                <!-- Images -->
+                <div class="pic">
+                    <img src="./img/cute_bakery_shop_whiteBg.jpg" alt="Bakery Shop 1">
+                </div>
+                <div class="pic">
+                    <img src="./img/cake-shop-a-party.jpg" alt="Cake Party">
+                </div>
+                <div class="pic">
+                    <img src="./img/a-bakery-shop_enlarged.jpg" alt="Bakery Shop 2">
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer with address and contact info -->
+        <div class="footer">
+            <div class="bottombar">
+                <div class="bottombarL">
+                    <h1>123 XYZ Road #01-23</h1>
+                    <h1>Singapore 123456</h1>
+                </div>
+
+                <div class="bottombarR">
+                    <h1>Phone (65) 12345678</h1>
+                    <h1>Email abc@gmail.com</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
